@@ -66,6 +66,8 @@ resetBtn.addEventListener('click', () => {
   particleSpeedInput.value = 1;
   particleMaterial.size = 5;
   isShaking = false;
+  document.getElementById('cameraPosition').textContent = 'Camera Position:';
+  document.getElementById('cameraDirection').textContent = 'Camera Direction:';
 });
 
 disturbParticlesBtn.addEventListener('click', () => {
@@ -100,6 +102,18 @@ goTop.addEventListener('click', () => {
 function randomColor() {
   return Math.floor(Math.random() * 16777215);
 }
+
+function logCameraInfo() {
+  const pos = camera.position;
+  const dir = new THREE.Vector3(0, 0, -1).applyQuaternion(camera.quaternion);
+
+  const posElem = document.querySelectorAll('p')[0];
+  posElem.textContent = `Camera Position: (${pos.x.toFixed(2)}, ${pos.y.toFixed(2)}, ${pos.z.toFixed(2)})`;
+
+  const dirElem = document.querySelectorAll('p')[1];
+  dirElem.textContent = `Camera Direction: (${dir.x.toFixed(2)}, ${dir.y.toFixed(2)}, ${dir.z.toFixed(2)})`;
+}
+
 
 // Main Function
 function animate() {
