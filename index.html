@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>threejs project371</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: black;
+      }
+      canvas {
+        display: block;
+      }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="box-wrapper">
+      <div class="box-container">
+        <label for="particleSize">Particle Size:</label>
+        <input type="range" id="particleSize" min="1" max="10" value="5">
+        <hr>
+        <label for="particleSpeed">Particle Speed:</label>
+        <input type="range" id="particleSpeed" min="1" max="10" value="1">
+        <hr>
+        <button id="randomizeColors">Randomize Color</button>
+        <h3>Toggle Camera</h3>
+        <hr>
+        <button id="goCorner">Corner</button>
+        <button id="goSide">Side</button>
+        <button id="goTop">Top</button>
+        <button id="findPos">Find  Camera Position</button>
+        <hr>
+        <h3>Harlem Shake</h3>
+        <button id="disturbParticles">Disturb Particles</button>
+        <hr>
+        <div class="box-footer">
+          <button id="resetBtn">Reset</button>
+        </div>
+      </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three/examples/js/controls/OrbitControls.js"></script>
+    <script src="app.js"></script>    
+    
+  </body>
+</html>
+
