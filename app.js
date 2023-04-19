@@ -6,7 +6,8 @@ const particleSizeInput = document.getElementById('particleSize');
 const randomizeColorsBtn = document.getElementById('randomizeColors');
 const particleSpeedInput = document.getElementById('particleSpeed');
 const disturbParticlesBtn = document.getElementById('disturbParticles');
-const center = new THREE.Vector3(); 
+camera.position.set(-579.85, 522.01, -553.95);
+const center = new THREE.Vector3(0.59, -0.52, 0.62);
 let isShaking = false;
 
 
@@ -59,8 +60,8 @@ particleSpeedInput.addEventListener('input', () => {
 });
 
 resetBtn.addEventListener('click', () => {
-  camera.position.set(0, 4.2862637970157365e-14, 700);
-  const center = new THREE.Vector3(); 
+  camera.position.set(-579.85, 522.01, -553.95);
+  const center = new THREE.Vector3(0.59, -0.52, 0.62);
   camera.lookAt(center); 
   particleMaterial.color.setHex(0xFFFFFF);
   particleSpeedInput.value = 1;
